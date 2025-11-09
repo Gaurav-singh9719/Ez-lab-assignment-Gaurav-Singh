@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ServiceCard({ title, description, image, link }) {
   return (
@@ -19,12 +20,12 @@ export default function ServiceCard({ title, description, image, link }) {
           </p>
         </div>
 
-        <a
-          href={link}
+        <Link
+          to={link}
           className="text-accent font-medium hover:text-navy transition-colors inline-flex items-center gap-2"
         >
           Explore Now →
-        </a>
+        </Link>
       </div>
     </div>
   );
