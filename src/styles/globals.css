@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global base styling to match the design references */
+:root {
+  --accent: #E85A2E;
+  --navy: #14324A;
+  --bg-peach: #F7E6E3;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-peach);
+  color: var(--navy);
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utility for the textured background (we'll let user add image in public if desired) */
+.bg-texture {
+  background-image: url('/images/texture.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Headings style */
+.h-script {
+  font-family: "Dancing Script", cursive;
+  color: var(--navy);
+  line-height: 1.05;
+}
+
+.h-serif {
+  font-family: "Playfair Display", serif;
+  color: var(--navy);
+}
+
+/* Note card style (sticky note) */
+.note {
+  background: #fff6e8;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 2rem;
+  transform: rotate(-6deg);
+}
+
+/* Small rounded accent button */
+.input-default {
+  @apply w-full border border-gray-300 rounded-md px-4 py-3 text-sm text-navy focus:outline-none focus:ring-2 focus:ring-accent/50 bg-white;
+}
+
+.btn-accent {
+  @apply inline-block px-6 py-2 rounded-full text-white font-medium transition-all duration-300;
+  background: var(--accent);
+  box-shadow: 0 6px 14px rgba(232, 90, 46, 0.25);
+}
+
